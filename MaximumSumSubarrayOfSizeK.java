@@ -1,6 +1,8 @@
 // T - O(n) | S - O(1)
 /*
   Given an array of positive numbers and a positive number ‘k’, find the maximum sum of any contiguous subarray of size ‘k’.
+  
+  NOTE: heavily commented because I initially had problems working this question out. MUST work on understanding this pattern.
 */
 
 class MaxSumSubArrayOfSizeK {
@@ -19,7 +21,7 @@ class MaxSumSubArrayOfSizeK {
     return maxSum;
   }
 
-  // helper method to setting maxSum
+  // helper method for setting maxSum
   // T - O(n) | S - O(1)
   public static int maxSumStartHelper(int k, int[] arr){
     int sum = 0;
