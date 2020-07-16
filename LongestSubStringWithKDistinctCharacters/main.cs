@@ -15,7 +15,7 @@ public static int findLengthOfSubString(String str, int k){
       frequencyDictionary.Add(currentChar, 1);
     }
 
-    while(frequencyDictionary.Values.Max() > k){
+    while(frequencyDictionary.Count > k){
       firstDictionary[str[startPointer]]--;
       if(firstDictionary[str[startPointer]] == 0){
         firstDictionary.Remove(str[startPointer]);
