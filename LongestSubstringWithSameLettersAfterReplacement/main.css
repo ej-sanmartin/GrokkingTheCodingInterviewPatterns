@@ -1,0 +1,25 @@
+class CharacterReplacement {
+  public static int findLength(String str, int k){
+    int windowStart = 0;
+    int maxLength = 0;
+    int maxRepeatLetterCount = 0;
+    Dictionary<char, int> letterFrequencyMap = new Dictionary<char, int>();
+
+    for(int i = 0; i < str.Length; i++){
+      char rightChar = str[i];
+      if(letterFrequencyMap.Contains(rightChar)){ letterFrequencyMap[rightChar]++; }
+      else { letterFrequencyMap.Add(rightChar, 1); }
+
+      maxRepeatLetterCount = Math.Max(maxRepeatLetterCount, letterFrequencyMap.[rightChar]);
+
+      if(i - windowStart + 1 - maxRepeatLetterCount > k){
+        char leftChar = str[windowStart];
+        letterFrequencyMap[leftChar]--;
+        windowStart++;
+      }
+
+      maxLength = Math.Max(maxLength, i - windowStart + 1);
+    }
+    return maxLength;
+  }
+}
