@@ -1,3 +1,10 @@
+/*
+  T - O(n)
+  S - o(1)
+  
+  Given an array of sorted numbers and a target sum, find a pair in the array whose sum is equal to the given target.
+*/
+
 class PairWithTargetSum {
 
   public static int[] search(int[] arr, int targetSum){
